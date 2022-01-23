@@ -1,4 +1,8 @@
-All images of glyphs are 0.736, with variable width
+================
+SINGLE GLYPHS
+================
+Objective: To obtain one token of each type for preliminary work.
+All images of glyphs are 0.736 in. high, with variable width
 BoM pages downloaded from archive.org as .JP2
 Opened in Adobe Photoshop and sliced, renamed, and saved as individual .PNG
 BoM Scan Pages Used for initial character sampling
@@ -6,3 +10,14 @@ BoM Scan Pages Used for initial character sampling
 0010
 0066
 0182
+================
+CORPUS OF GLYPHS
+================
+Objective: To obtain a random sampling of multiple tokens of the same type:
+BoM scan pages used
+0005
+
+Each line of full text (excluding lines in all caps) were sliced in Adobe Photoshop.
+Frames were 0.736 in. high with variable width
+Frames were aligned with the bottom of the comma and the top of the cap.
+TODO: Mitigate frequency effects (glyphs like zhee and chee are rare)
