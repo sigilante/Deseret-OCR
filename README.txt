@@ -28,3 +28,5 @@ TODO: Mitigate frequency effects (glyphs like zhee and chee are rare)
 
 Characters are extracted from [the Web Archive publication of the 1869 Book of Mormon](https://archive.org/details/bookofmormdeseretalpha00/page/28/mode/2up) under fair use provisions.
 
+charproc.m pads character .pngs with 0s to dimensions of largest character.
+
