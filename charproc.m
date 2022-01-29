@@ -12,5 +12,5 @@ end
 
 for i = 1:length(myfiles)
     mydim(i,:) = size(mychar{i,1});
-    padchar{i,1} = padarray(mychar{i,1},[maxh-mydim(i,1),maxw-mydim(i,2)]);
+    padchar{i,1} = padarray(mychar{i,1},[floor(maxh-mydim(i,1)/2),floor(maxw-mydim(i,2)/2)],0,'both');
 end
