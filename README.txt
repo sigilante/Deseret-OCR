@@ -28,5 +28,5 @@ TODO: Mitigate frequency effects (glyphs like zhee and chee are rare)
 
 Characters are extracted from [the Web Archive publication of the 1869 Book of Mormon](https://archive.org/details/bookofmormdeseretalpha00/page/28/mode/2up) under fair use provisions.
 
-charproc.m pads character .pngs with 0s to dimensions of largest character.
+charproc.m pads character .pngs to dimensions of the tallest and widest characters, nearly centering the original glyph in the frame. Output charstack is a 3D rectangular matrix suitable for cluster analysis.
 
