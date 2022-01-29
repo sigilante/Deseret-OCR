@@ -39,3 +39,6 @@ Notes on classification:
 (4) ..
 TODO: Further assess clustering and optimize as needed
 
+Glyphs organized into subfolders in chars-L. This was done by visual inspection of each kmeans cluster and manual copy and paste. The kmeans clustering did most of the heavy lifting. 
+Problematic distinctions included aw/long-a; long-a/long-e; kay/gay; gay/long-aw. It is possible that a handful of determinations would be different if the words were found in context (e.g., a-long vs e-long)
+TODO: Should majuscule and miniscules be organized together?
