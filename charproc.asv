@@ -1,13 +1,6 @@
-function [charstack,maxhidx,maxwidx] = charproc(mydir)
+function [padchar,maxhidx,maxwidx] = charproc(mydir)
 % Pad all characters to a uniform height and width based on the
-% tallest and widest characters found in a folder of extracted characters
-% (mydir).
-% The original characters will be nearly centered in the output:
-% charstack is a rectangular 3D matrix suitable for cluster analysis.
-% maxhidx and maxwidx are the indices corresponding to the tallest and
-% widest glyphs, respectively.
-% imshow(charstack(:,:,maxhidx)) will show the padded version of the
-% tallest character in the database
+% tallest and widest characters with the original characters nearly centered.
 
 myfiles = dir(fullfile(mydir,'*.png'));
 for i = 1:length(myfiles)
@@ -24,7 +17,6 @@ for i = 1:length(myfiles)
         padchar{i,1} = padarray(padchar{i,1},[1,0],0,'post');
     end
     if size(padchar{i,1},2) < maxw
-        padchar{i,1} = padarray(padchar{i,1},[0,1],0,'post');
+        charstack{i,:,:} = padarray(padchar{i,1},[0,1],0,'post');
     end
-    charstack(:,:,i) = padchar{i,1};
 end
