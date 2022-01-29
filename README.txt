@@ -28,5 +28,14 @@ TODO: Mitigate frequency effects (glyphs like zhee and chee are rare)
 
 Characters are extracted from [the Web Archive publication of the 1869 Book of Mormon](https://archive.org/details/bookofmormdeseretalpha00/page/28/mode/2up) under fair use provisions.
 
-charproc.m pads character .pngs to dimensions of the tallest and widest characters, nearly centering the original glyph in the frame. Output charstack is a 3D rectangular matrix suitable for cluster analysis.
+charproc.m pads character .pngs to dimensions of the tallest and widest characters, nearly centering the original glyph in the frame.
+Light noise is added to minimize the effect of the white borders on clustering analysis.
+Clustering analysis using kmeans with groups = 48 to accommodate 38 glyphs and 10 punctuation marks.
+Relabeled images are found inc ..\chars-L\ where the prefix p0-c is followed by the glyph-type (01-48) and the serial id / unique identifier for the glyph
+Notes on classification: 
+(1) Caps are generally clustered (e.g., glyph-type 35) due to glyph size rather than shape;
+(2) Clustering is less robust for highly similar shapes like long-a vs aw, long-o vs long-ah;
+(3) Numerals and punctuation are not frequent enough, relatively speaking, to form their own classes;
+(4) ..
+TODO: Further assess clustering and optimize as needed
 
