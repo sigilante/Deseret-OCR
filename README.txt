@@ -1,3 +1,94 @@
+#   Deseret OCR
+
+Illinois Deseret Consortium
+
+This repo contains code and data necessary to train an OCR on the 1869 Book of Mormon published by Russell Bros. in New York City.
+
+---
+
+##  Procedure
+
+### 1. Data Collection:
+
+#### a. Image Dataset:
+
+- Gather a diverse dataset of images containing examples of the Deseret alphabet.  (`chars-raw`)
+- Ensure variations in font, size, style, and orientation to make the OCR robust.  (omitted)
+
+#### b. Annotation:
+
+- Manually annotate the images to mark the bounding boxes around individual characters.  (`charproc.m`, `chars-sorted`)
+- Label each bounding box with the corresponding Deseret alphabet character.  (omitted)
+
+### 2. Data Preprocessing:
+
+#### a. Image Cleaning:
+
+- Remove noise and artifacts from the images, ensuring clarity and consistency.
+- Standardize the image size and resolution.  (`char-clean.py`, `chars-cleaned`)
+
+#### b. Data Augmentation:
+
+- Increase the size of your dataset by applying transformations like rotation, scaling, and flipping to create variations of the original images.  (omitted)
+
+### 3. Training Data Preparation:
+
+#### a. Split Dataset:
+
+- Divide your dataset into training, validation, and test sets to evaluate the OCR model's performance.  (`split.py`)
+
+#### b. Convert Annotations:
+
+- Convert the annotated data into a format compatible with your OCR training framework (e.g., YOLO format, COCO format).
+
+### 4. OCR Model Selection:
+
+#### a. Choose a Framework:
+
+- Select an OCR framework that supports training on custom datasets. Tesseract, PyTesseract, and TensorFlow OCR are popular choices.
+
+#### b. Model Architecture:
+
+- Choose or design a model architecture suitable for your OCR task. Consider architectures like CNNs (Convolutional Neural Networks) and RNNs (Recurrent Neural Networks).
+
+### 5. Training:
+
+#### a. Configure Training Parameters:
+
+- Set hyperparameters such as learning rate, batch size, and number of epochs.
+
+#### b. Train the Model:
+
+- Feed the preprocessed data into the OCR model and train it on the Deseret alphabet dataset.
+
+### 6. Evaluation:
+
+#### a. Validation Set:
+
+- Evaluate the OCR model's performance on the validation set to fine-tune parameters and prevent overfitting.
+
+#### b. Test Set:
+
+- Assess the final model on the test set to ensure generalization to unseen data.
+
+### 7. Deployment:
+
+#### a. Integration:
+
+- Integrate the trained OCR model into your desired application or system.
+
+#### b. Testing in Real-World Scenarios:
+
+- Test the OCR system with real-world examples to identify and address any issues.
+
+---
+
+- https://nanonets.com/blog/ocr-with-tesseract/
+- https://pretius.com/blog/ocr-tesseract-training-data/
+- https://github.com/zdenop/qt-box-editor
+
+---
+
 ================
 SINGLE GLYPHS
 ================
